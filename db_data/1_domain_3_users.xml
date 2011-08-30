@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <Entity entity_id="1" entity_mailing="true"/>
+  <Entity entity_id="2" entity_mailing="true"/>
+  <Entity entity_id="3" entity_mailing="true"/>
+  <Entity entity_id="4" entity_mailing="true"/>
+  <Entity entity_id="5" entity_mailing="true"/>
+  <Entity entity_id="6" entity_mailing="true"/>
+  <Entity entity_id="7" entity_mailing="true"/>
+  <Entity entity_id="8" entity_mailing="true"/>
+  <Entity entity_id="9" entity_mailing="true"/>
+  <Entity entity_id="10" entity_mailing="true"/>
+  <Entity entity_id="11" entity_mailing="true"/>
+  <Entity entity_id="12" entity_mailing="true"/>
+  <Entity entity_id="13" entity_mailing="true"/>
+  <Entity entity_id="14" entity_mailing="true"/>
+  <Entity entity_id="15" entity_mailing="true"/>
+  <Entity entity_id="16" entity_mailing="true"/>
+  <Entity entity_id="17" entity_mailing="true"/>
+  <Entity entity_id="18" entity_mailing="true"/>
+  <Entity entity_id="19" entity_mailing="true"/>
+  
+  <!-- Global domain and admin0 -->
+  <Domain domain_id="1" domain_timeupdate="2009-10-09 15:10:00.0" domain_timecreate="2009-10-09 15:10:00.0" domain_label="Global Domain" domain_description="Virtual domain for managing domains" domain_name="global.virt" domain_global="true"/>
+  <DomainEntity domainentity_entity_id="1" domainentity_domain_id="1"/>
+  <UserObm userobm_id="1" userobm_domain_id="1" userobm_timeupdate="2009-10-09 15:10:21.0" userobm_local="1" userobm_system="0" userobm_archive="0" userobm_status="VALID" userobm_timelastaccess="2009-10-09 15:10:21.0" userobm_login="admin0" userobm_nb_login_failed="0" userobm_password_type="PLAIN" userobm_password="admin" userobm_perms="admin" userobm_delegation_target="" userobm_delegation="" userobm_uid="1000" userobm_gid="512" userobm_hidden="0" userobm_lastname="Admin Lastname" userobm_firstname="Firstname" userobm_title="" userobm_country_iso3166="0" userobm_phone="" userobm_phone2="" userobm_mobile="" userobm_fax="" userobm_fax2="" userobm_web_perms="0" userobm_web_all="0" userobm_mail_perms="0" userobm_mail_ext_perms="0" userobm_mail_quota="0" userobm_mail_quota_use="0" userobm_nomade_perms="0" userobm_nomade_enable="0" userobm_nomade_local_copy="0" userobm_vacation_enable="0" userobm_samba_perms="0" userobm_samba_home="" userobm_samba_home_drive="" userobm_samba_logon_script=""/>
+  <UserEntity userentity_entity_id="2" userentity_user_id="1"/>
+  
+  <!-- Domain 1 -->
+  <!-- if we specify domain_usercreate="1" below, the insert fails (pb of FK constraint), though the user is already inserted... -->
+  <Domain domain_id="2" domain_timeupdate="2009-10-09 15:11:02.0" domain_timecreate="2009-10-09 15:11:02.0" domain_label="Linagora" domain_description="" domain_name="linagora.com" domain_alias="" domain_global="false"/>
+  <DomainEntity domainentity_entity_id="3" domainentity_domain_id="2"/>
+  <UGroup group_id="1" group_domain_id="2" group_timeupdate="2009-10-09 15:11:02.0" group_timecreate="2009-10-09 15:11:02.0" group_usercreate="1" group_system="0" group_archive="0" group_privacy="0" group_local="1" group_samba="0" group_gid="1000" group_mailing="0" group_delegation="" group_name="Utilisateurs"/>
+  <GroupEntity groupentity_entity_id="4" groupentity_group_id="1"/>
+  
+  <!-- User 1 (John Doe) -->
+  <UserObm userobm_id="2" userobm_domain_id="2" userobm_timeupdate="2009-10-09 15:11:45.0" userobm_timecreate="2009-10-09 15:11:45.0" userobm_userupdate="1" userobm_usercreate="1" userobm_local="1" userobm_system="0" userobm_archive="0" userobm_status="VALID" userobm_login="user1" userobm_nb_login_failed="0" userobm_password_type="PLAIN" userobm_password="password" userobm_perms="user" userobm_delegation_target="" userobm_delegation="" userobm_uid="1002" userobm_gid="1000" userobm_hidden="0" userobm_kind="" userobm_lastname="Doe" userobm_firstname="John" userobm_title="" userobm_company="" userobm_direction="" userobm_service="" userobm_address1="" userobm_address2="" userobm_address3="" userobm_zipcode="" userobm_town="" userobm_expresspostal="" userobm_country_iso3166="" userobm_phone="" userobm_phone2="" userobm_mobile="" userobm_fax="" userobm_fax2="" userobm_web_perms="0" userobm_web_all="0" userobm_mail_perms="0" userobm_mail_ext_perms="0" userobm_email="" userobm_mail_quota="0" userobm_mail_quota_use="0" userobm_email_nomade="" userobm_vacation_enable="0" userobm_vacation_message="" userobm_samba_perms="0" userobm_samba_home="" userobm_samba_home_drive="" userobm_samba_logon_script="" userobm_description=""/>
+  <UserEntity userentity_entity_id="7" userentity_user_id="2"/>
+  <UserObmGroup userobmgroup_group_id="1" userobmgroup_userobm_id="2"/>
+  <of_usergroup of_usergroup_group_id="1" of_usergroup_user_id="2"/>
+  <CalendarEntity calendarentity_entity_id="8" calendarentity_calendar_id="2"/>
+  <EntityRight entityright_id="2" entityright_entity_id="8" entityright_access="0" entityright_read="0" entityright_write="0" entityright_admin="0"/>
+  <MailboxEntity mailboxentity_entity_id="9" mailboxentity_mailbox_id="2"/>
+  <EntityRight entityright_id="1" entityright_entity_id="9" entityright_access="0" entityright_read="0" entityright_write="0" entityright_admin="0"/>
+  <AddressBook id="1" domain_id="2" timeupdate="2009-10-09 15:11:45.0" timecreate="2009-10-09 15:11:45.0" userupdate="1" usercreate="1" origin="obm-ui-web-2.3.0-trunk" owner="2" name="contacts" is_default="1" syncable="1"/>
+  <AddressBook id="2" domain_id="2" timeupdate="2009-10-09 15:11:45.0" timecreate="2009-10-09 15:11:45.0" userupdate="1" usercreate="1" origin="obm-ui-web-2.3.0-trunk" owner="2" name="collected_contacts" is_default="1" syncable="1"/>
+  <AddressbookEntity addressbookentity_entity_id="5" addressbookentity_addressbook_id="1"/>
+  <AddressbookEntity addressbookentity_entity_id="6" addressbookentity_addressbook_id="2"/>
+  
+  <!-- User 2 (Jane Doe) -->
+  <UserObm userobm_id="3" userobm_domain_id="2" userobm_timeupdate="2009-10-09 15:12:12.0" userobm_timecreate="2009-10-09 15:12:12.0" userobm_userupdate="1" userobm_usercreate="1" userobm_local="1" userobm_system="0" userobm_archive="0" userobm_status="VALID" userobm_login="user2" userobm_nb_login_failed="0" userobm_password_type="PLAIN" userobm_password="password" userobm_perms="user" userobm_delegation_target="" userobm_delegation="" userobm_uid="1003" userobm_gid="1000" userobm_hidden="0" userobm_kind="" userobm_lastname="Doe" userobm_firstname="Jane" userobm_title="" userobm_company="" userobm_direction="" userobm_service="" userobm_address1="" userobm_address2="" userobm_address3="" userobm_zipcode="" userobm_town="" userobm_expresspostal="" userobm_country_iso3166="" userobm_phone="" userobm_phone2="" userobm_mobile="" userobm_fax="" userobm_fax2="" userobm_web_perms="0" userobm_web_all="0" userobm_mail_perms="0" userobm_mail_ext_perms="0" userobm_email="" userobm_mail_quota="0" userobm_mail_quota_use="0" userobm_email_nomade="" userobm_vacation_enable="0" userobm_vacation_message="" userobm_samba_perms="0" userobm_samba_home="" userobm_samba_home_drive="" userobm_samba_logon_script="" userobm_description=""/>
+  <UserEntity userentity_entity_id="12" userentity_user_id="3"/>
+  <UserObmGroup userobmgroup_group_id="1" userobmgroup_userobm_id="3"/>
+  <of_usergroup of_usergroup_group_id="1" of_usergroup_user_id="3"/>
+  <CalendarEntity calendarentity_entity_id="13" calendarentity_calendar_id="3"/>
+  <EntityRight entityright_id="4" entityright_entity_id="13" entityright_access="0" entityright_read="0" entityright_write="0" entityright_admin="0"/>
+  <MailboxEntity mailboxentity_entity_id="14" mailboxentity_mailbox_id="3"/>
+  <EntityRight entityright_id="3" entityright_entity_id="14" entityright_access="0" entityright_read="0" entityright_write="0" entityright_admin="0"/>
+  <AddressBook id="3" domain_id="2" timeupdate="2009-10-09 15:12:12.0" timecreate="2009-10-09 15:12:12.0" userupdate="1" usercreate="1" origin="obm-ui-web-2.3.0-trunk" owner="3" name="contacts" is_default="1" syncable="1"/>
+  <AddressBook id="4" domain_id="2" timeupdate="2009-10-09 15:12:12.0" timecreate="2009-10-09 15:12:12.0" userupdate="1" usercreate="1" origin="obm-ui-web-2.3.0-trunk" owner="3" name="collected_contacts" is_default="1" syncable="1"/>
+  <AddressbookEntity addressbookentity_entity_id="10" addressbookentity_addressbook_id="3"/>
+  <AddressbookEntity addressbookentity_entity_id="11" addressbookentity_addressbook_id="4"/>
+  
+  <!-- User 3 (Jack Bauer) -->
+  <UserObm userobm_id="4" userobm_domain_id="2" userobm_timeupdate="2009-10-09 15:13:12.0" userobm_timecreate="2009-10-09 15:13:12.0" userobm_userupdate="1" userobm_usercreate="1" userobm_local="1" userobm_system="0" userobm_archive="0" userobm_status="VALID" userobm_login="user3" userobm_nb_login_failed="0" userobm_password_type="PLAIN" userobm_password="password" userobm_perms="user" userobm_delegation_target="" userobm_delegation="" userobm_uid="1004" userobm_gid="1000" userobm_hidden="0" userobm_kind="" userobm_lastname="Bauer" userobm_firstname="Jack" userobm_title="" userobm_company="" userobm_direction="" userobm_service="" userobm_address1="" userobm_address2="" userobm_address3="" userobm_zipcode="" userobm_town="" userobm_expresspostal="" userobm_country_iso3166="" userobm_phone="" userobm_phone2="" userobm_mobile="" userobm_fax="" userobm_fax2="" userobm_web_perms="0" userobm_web_all="0" userobm_mail_perms="0" userobm_mail_ext_perms="0" userobm_email="" userobm_mail_quota="0" userobm_mail_quota_use="0" userobm_email_nomade="" userobm_vacation_enable="0" userobm_vacation_message="" userobm_samba_perms="0" userobm_samba_home="" userobm_samba_home_drive="" userobm_samba_logon_script="" userobm_description=""/>
+  <UserEntity userentity_entity_id="15" userentity_user_id="4"/>
+  <UserObmGroup userobmgroup_group_id="1" userobmgroup_userobm_id="4"/>
+  <of_usergroup of_usergroup_group_id="1" of_usergroup_user_id="4"/>
+  <CalendarEntity calendarentity_entity_id="19" calendarentity_calendar_id="4"/>
+  <EntityRight entityright_id="6" entityright_entity_id="19" entityright_access="0" entityright_read="0" entityright_write="0" entityright_admin="0"/>
+  <MailboxEntity mailboxentity_entity_id="16" mailboxentity_mailbox_id="4"/>
+  <EntityRight entityright_id="5" entityright_entity_id="16" entityright_access="0" entityright_read="0" entityright_write="0" entityright_admin="0"/>
+  <AddressBook id="5" domain_id="2" timeupdate="2009-10-09 15:13:12.0" timecreate="2009-10-09 15:13:12.0" userupdate="1" usercreate="1" origin="obm-ui-web-2.3.0-trunk" owner="4" name="contacts" is_default="1" syncable="1"/>
+  <AddressBook id="6" domain_id="2" timeupdate="2009-10-09 15:13:12.0" timecreate="2009-10-09 15:13:12.0" userupdate="1" usercreate="1" origin="obm-ui-web-2.3.0-trunk" owner="4" name="collected_contacts" is_default="1" syncable="1"/>
+  <AddressbookEntity addressbookentity_entity_id="17" addressbookentity_addressbook_id="5"/>
+  <AddressbookEntity addressbookentity_entity_id="18" addressbookentity_addressbook_id="6"/>
+  
+  <!-- Calendar permissions :
+  		* User 1 has access right on user 2
+  		* User 2 has read access on user 1
+  		* User 1 has write right on user 3 -->
+  <EntityRight entityright_id="7" entityright_entity_id="13" entityright_consumer_id="7" entityright_access="1" entityright_read="0" entityright_write="0" entityright_admin="0"/>
+  <EntityRight entityright_id="8" entityright_entity_id="8" entityright_consumer_id="12" entityright_access="1" entityright_read="1" entityright_write="0" entityright_admin="0"/>
+  <EntityRight entityright_id="9" entityright_entity_id="19" entityright_consumer_id="7" entityright_access="1" entityright_read="1" entityright_write="1" entityright_admin="0"/>
+</dataset>

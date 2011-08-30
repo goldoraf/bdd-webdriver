@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 14.2-b01 (Sun Microsystems Inc.)
+Built-By: raphael
+Main-Class: org.obm.testing.support.Runner
+Class-Path: commons-codec-1.4.jar commons-collections-3.2.1.jar common
+ s-httpclient-3.1.jar commons-io-1.4.jar commons-lang-2.4.jar commons-
+ logging-1.1.1.jar cssparser-0.9.5.jar dbunit-2.4.6.jar hamcrest-all-1
+ .2.jar htmlunit-2.6.jar htmlunit-core-js-2.6.jar jbehave-core-2.3.jar
+  json-20080701.jar junit-4.7.jar junit-dep-4.7.jar log4j-over-slf4j-1
+ .5.8.jar mysql-connector-java-5.1.9-bin.jar nekohtml-1.9.13.jar postg
+ resql-8.4-701.jdbc4.jar sac-1.3.jar serializer-2.7.1.jar slf4j-api-1.
+ 5.8.jar slf4j-simple-1.5.8.jar webdriver-common.jar webdriver-support
+ .jar webdriver-firefox.jar webdriver-htmlunit.jar xalan-2.7.1.jar xer
+ cesImpl-2.9.1.jar xml-apis-1.3.04.jar
+

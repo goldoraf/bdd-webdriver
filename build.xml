@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="OBM Testing" default="jar" basedir=".">
+	<property name="user.name" value="OBM" />
+	<property name="source.dir" value="src" />
+	<property name="lib.dir" value="lib" />
+	<property name="build.dir" value="build" />
+	<property name="classes.dir" value="${build.dir}/classes" />
+	<property name="scenarios.dir" value="scenarios" />
+	<path id="classpath">
+	 	<fileset dir="${lib.dir}" includes="*.jar"/>
+	</path>
+	<target name="clean">
+		<delete dir="${build.dir}" />
+	</target>
+	<target name="prepare" depends="clean">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${classes.dir}" />
+		<mkdir dir="${classes.dir}/scenarios" />
+	</target>
+	<target name="compile" depends="prepare">
+		<javac srcdir="${source.dir}" destdir="${classes.dir}" classpathref="classpath" />
+		<copy todir="${classes.dir}">
+	      <fileset dir="${source.dir}">
+	        <exclude name="**/*.java"/>
+	      </fileset>
+	    </copy>
+		<copy todir="${classes.dir}/scenarios">
+			<fileset dir="${scenarios.dir}" />
+		</copy>
+	</target>
+	<target name="copy" depends="compile">
+		<copy todir="${build.dir}">
+			<fileset dir="${lib.dir}"/>
+		</copy>
+	</target>
+	<target name="jar" depends="copy">
+		<manifest file="MANIFEST.MF">
+	        <attribute name="Built-By" value="${user.name}"/>
+	        <attribute name="Main-Class" value="org.obm.testing.support.Runner"/>
+			<attribute name="Class-Path" value="commons-cli-1.1.jar commons-codec-1.4.jar commons-collections-3.2.1.jar commons-httpclient-3.1.jar commons-io-1.4.jar commons-lang-2.4.jar commons-logging-1.1.1.jar cssparser-0.9.5.jar dbunit-2.4.6.jar hamcrest-all-1.2.jar htmlunit-2.6.jar htmlunit-core-js-2.6.jar jbehave-core-2.3.jar json-20080701.jar junit-4.7.jar junit-dep-4.7.jar log4j-over-slf4j-1.5.8.jar mysql-connector-java-5.1.9-bin.jar nekohtml-1.9.13.jar postgresql-8.4-701.jdbc4.jar sac-1.3.jar serializer-2.7.1.jar slf4j-api-1.5.8.jar slf4j-simple-1.5.8.jar webdriver-common.jar webdriver-support.jar webdriver-firefox.jar webdriver-htmlunit.jar xalan-2.7.1.jar xercesImpl-2.9.1.jar xml-apis-1.3.04.jar"/>
+	    </manifest>
+		<jar destfile="${build.dir}/obm-testing.jar" basedir="${classes.dir}" manifest="MANIFEST.MF" />
+	</target>
+</project> 

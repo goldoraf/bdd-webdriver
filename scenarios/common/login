@@ -1,0 +1,21 @@
+Story: Log in
+As an OBM user
+I want to log in
+So that I can use OBM's marvellous features
+
+Scenario: User provides correct credentials
+Given I am on the login page
+When I log in with login user1 and password password
+Then I should see the landing page
+ 
+Scenario: User provides invalid password
+Given I am on the login page
+When I log in with login user1 and password xxxx
+Then I should see the login page
+And I should be informed that my credentials are invalid
+ 
+Scenario: User provides invalid username
+Given I am on the login page
+When I log in with login fail and password password
+Then I should see the login page
+And I should be informed that my credentials are invalid

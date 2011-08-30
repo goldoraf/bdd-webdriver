@@ -1,0 +1,14 @@
+Story: Meeting creation
+As an user
+I want to use meeting creation features
+So that I can find a free slot for all attendees
+And I can notice attendees automatically
+
+Scenario: Successful meeting creation using the new event form
+Given I log in as user1
+And I have access rights on user2's calendar
+When I create a meeting "Réunion OBM" with user2 tomorrow between 11:00 and 12:30
+Then I should be redirected to my agenda
+And I should see an event "Réunion OBM" in my agenda
+And I should be informed that the event has been inserted
+And user2 should see a waiting event named "Réunion OBM" when he access his calendar

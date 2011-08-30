@@ -1,0 +1,16 @@
+Story: Attach documents to meetings
+As an user
+I want to attach documents to meetings
+So that I can share them with the meeting's attendees
+
+Scenario: Meeting creator attach a file
+Given I log in as user1
+When I create a meeting "Réunion OBM" with user3 tomorrow between 11:00 and 12:30, with an attached file "test_file_1.txt"
+Then I should be able to download the file "test_file_1.txt" when I consult the "Réunion OBM" event
+And user3 should be able to download the file "test_file_1.txt" when he consults the "Réunion OBM" event
+And an user with read permissions on user1 calendar shouldn't see the file "test_file_1.txt" when he consults the "Réunion OBM" event
+
+Scenario: Meeting creator authorizes document attachments
+Given I log in as user1
+When I create a meeting "Réunion OBM" with user3 tomorrow between 11:00 and 12:30, with attachments authorized
+Then user3 should be able to attach a file "test_file_2.txt" when he consults the "Réunion OBM" event

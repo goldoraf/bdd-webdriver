@@ -1,0 +1,11 @@
+Story: Appointment creation
+As an user
+I want to add a new appointment in my calendar
+So that I can better organize my time
+
+Scenario: Successful appointment creation
+Given I log in as user1
+When I create an appointment "Préparer les slides" tomorrow between 11:00 and 12:30
+Then I should be redirected to my agenda
+And I should see an event "Préparer les slides" in my agenda
+And I should be informed that the event has been inserted

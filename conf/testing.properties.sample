@@ -1,0 +1,9 @@
+obm.host=http://obm-testing
+
+browser.driver=firefox
+
+db.type=mysql
+db.name=obm_test
+db.login=obm
+db.password=password
+db.host=localhost
